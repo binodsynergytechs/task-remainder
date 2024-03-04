@@ -1,0 +1,250 @@
+{
+	"info": {
+		"_postman_id": "5d7b47ef-24aa-4fdb-8dbc-a95d7c50820e",
+		"name": "task-remainder",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3615815",
+		"_collection_link": "https://lunar-comet-116565.postman.co/workspace/New-Team-Workspace~1b9ef5e7-1c83-4274-b77e-b68bd941d100/collection/3615815-5d7b47ef-24aa-4fdb-8dbc-a95d7c50820e?action=share&source=collection_link&creator=3615815"
+	},
+	"item": [
+		{
+			"name": "task",
+			"item": [
+				{
+					"name": "Create task",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"title\":\"Task 1\",\"description\":\"Description for Task 1\",\"priority\":1,\"due_at\":\"2024-03-08T12:00:00Z\"}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/task",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"task"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get task by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/task/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"task",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all task",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/task",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"task"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update task by id",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"title\":\"Updated Task 1\",\"description\":\"Updated description for Task 1\",\"priority\":2,\"due_at\":\"2024-03-09T12:00:00Z\"}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/task/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"task",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete task by id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "remainder",
+			"item": [
+				{
+					"name": "Create Remainder",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"task_id\":1,\"contact\":\"John Doe\",\"reminder_at\":\"2024-03-08T12:00:00Z\"}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/reminder",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"reminder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ger Remainder By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/reminder/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"reminder",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all remainder",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/reminder",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"reminder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Remainder by id",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"task_id\":1,\"contact\":\"Updated Contact\",\"reminder_at\":\"2024-03-09T12:00:00Z\"}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/remider/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"remider",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Remainder by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/reminder/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"reminder",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

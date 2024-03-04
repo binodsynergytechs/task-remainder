@@ -16,7 +16,7 @@ import (
 
 type taskController struct{}
 
-func GetTaskController() *taskController {
+func NewTaskController() *taskController {
 	return &taskController{}
 }
 
