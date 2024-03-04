@@ -1,0 +1,15 @@
+database:
+  dsn: host=localhost user=binodthapa password=binod dbname=test_task_remainder port=5432 sslmode=disable
+
+app:
+  port: 8080
+  debug: true
+
+jwt:
+  secret: abc192883
+  expiry: 24
+
+twilio:
+  sender_name: twilio_sender_name
+  sender_email_id: twilio_sender_email_id
+  sendgrid_api_key: api_key
